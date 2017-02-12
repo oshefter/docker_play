@@ -1,5 +1,21 @@
 #coding=utf-8
 import csv
+import datetime
+import platform
+
+
+print "python version=", platform.python_version()
+
+
+today = datetime.date.today()
+print "date=", today
+
+print "testing numpy"
+x = 3
+print "type of x=",x, "is=",type(x) 
+ 
+ 
+print "testing csv file"
  
 ifile = open("test.csv", "rb")
 reader = csv.reader(ifile)
