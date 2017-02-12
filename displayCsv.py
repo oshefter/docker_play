@@ -1,23 +1,22 @@
 #coding=utf-8
 import csv
 import datetime
-import platform
 
 
-print "python version=", platform.python_version()
-
+import sys
+print (sys.version)
 
 today = datetime.date.today()
-print "date=", today
+print ("date=", today)
 
-print "testing numpy"
+print ("testing numpy")
 x = 3
-print "type of x=",x, "is=",type(x) 
+print ("type of x=",x, "is=",type(x))
  
  
-print "testing csv file"
+print ("testing csv file")
  
-ifile = open("test.csv", "rb")
+ifile = open("test.csv", "r")
 reader = csv.reader(ifile)
  
 rownum = 0
@@ -29,7 +28,7 @@ for row in reader:
 		colnum = 0
 	rownum += 1
 for col in row:
-	print header
+	print (header)
 	print ('%-8s: %s' % (header[colnum], col))
 	#print ("%s" % col)
 	colnum += 1
